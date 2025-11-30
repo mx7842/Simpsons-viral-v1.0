@@ -63,10 +63,6 @@ export const generateViralScript = async (
   language: Language,
   topic: string
 ): Promise<ScriptResponse> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API Key is missing.");
-  }
-
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   try {
