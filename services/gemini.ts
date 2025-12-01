@@ -1,4 +1,4 @@
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { ScriptResponse, Language } from "../types";
 
 const SYSTEM_INSTRUCTION = `
@@ -16,7 +16,7 @@ ESTRUTURA DE RESPOSTA (JSON):
 5. step5_risk: Avaliação de risco (<8%).
 `;
 
-const responseSchema = {
+const responseSchema: Schema = {
   type: Type.OBJECT,
   properties: {
     step1_script: {
@@ -80,7 +80,7 @@ export const generateViralScript = async (
         systemInstruction: SYSTEM_INSTRUCTION,
         responseMimeType: "application/json",
         responseSchema: responseSchema,
-        temperature: 0.8, // Slightly creative for the "Simpsons" vibe
+        temperature: 0.8,
       },
     });
 
