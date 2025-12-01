@@ -42,10 +42,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black text-white selection:bg-yellow-400 selection:text-black">
+    <div className="min-h-screen bg-black text-white selection:bg-yellow-400 selection:text-black">
       
       {/* Navbar */}
-      <nav className="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+      <nav className="border-b border-white/10 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="bg-yellow-400 p-1 rounded-md rotate-3">
