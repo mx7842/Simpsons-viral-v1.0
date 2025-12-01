@@ -20,7 +20,7 @@ const CopyButton: React.FC<{ text: string }> = ({ text }) => {
     <button
       onClick={handleCopy}
       className="p-2 text-slate-400 hover:text-blue-500 transition-colors"
-      title="Copy to clipboard"
+      title="Copiar para área de transferência"
     >
       {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
     </button>
@@ -33,12 +33,12 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ data, onReset }) =
       
       {/* Header Actions */}
       <div className="flex justify-between items-center bg-slate-800 p-4 rounded-lg border border-slate-700">
-        <h2 className="text-yellow-400 font-cartoon text-xl">MISSION ACCOMPLISHED</h2>
+        <h2 className="text-yellow-400 font-cartoon text-xl">MISSÃO CUMPRIDA</h2>
         <button 
           onClick={onReset}
           className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded text-sm font-bold transition-colors"
         >
-          NEW CONSPIRACY
+          NOVA CONSPIRAÇÃO
         </button>
       </div>
 
@@ -47,7 +47,7 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ data, onReset }) =
         <div className="bg-slate-50 p-4 border-b border-slate-100 flex justify-between items-center">
           <div className="flex items-center text-red-600">
              <FileText className="w-5 h-5 mr-2" />
-             <h3 className="font-cartoon text-xl tracking-wide">STEP 1: BREAKING NEWS SCRIPT</h3>
+             <h3 className="font-cartoon text-xl tracking-wide">ETAPA 1: ROTEIRO BREAKING NEWS</h3>
           </div>
           <CopyButton text={data.step1_script} />
         </div>
@@ -63,7 +63,7 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ data, onReset }) =
         <div className="bg-slate-50 p-4 border-b border-slate-100 flex justify-between items-center">
           <div className="flex items-center text-yellow-600">
              <ImageIcon className="w-5 h-5 mr-2" />
-             <h3 className="font-cartoon text-xl tracking-wide">STEP 2: 20 IMAGE PROMPTS</h3>
+             <h3 className="font-cartoon text-xl tracking-wide">ETAPA 2: 20 PROMPTS DE IMAGEM</h3>
           </div>
           <CopyButton text={data.step2_prompts.join('\n\n')} />
         </div>
@@ -88,7 +88,7 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ data, onReset }) =
         <div className="bg-white rounded-xl shadow-xl overflow-hidden border-l-8 border-blue-500">
             <div className="bg-slate-50 p-4 border-b border-slate-100 flex items-center text-blue-600">
               <BarChart2 className="w-5 h-5 mr-2" />
-              <h3 className="font-cartoon text-xl tracking-wide">STEP 3: VIRAL HEADLINES</h3>
+              <h3 className="font-cartoon text-xl tracking-wide">ETAPA 3: HEADLINES VIRAIS</h3>
             </div>
             <div className="p-4 space-y-4">
               {data.step3_headlines.map((item, idx) => (
@@ -109,12 +109,12 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ data, onReset }) =
           <div className="bg-white rounded-xl shadow-xl overflow-hidden border-l-8 border-green-500">
             <div className="bg-slate-50 p-4 border-b border-slate-100 flex items-center text-green-600">
                 <AlertTriangle className="w-5 h-5 mr-2" />
-                <h3 className="font-cartoon text-xl tracking-wide">RISK ASSESSMENT</h3>
+                <h3 className="font-cartoon text-xl tracking-wide">AVALIAÇÃO DE RISCO</h3>
               </div>
               <div className="p-6 flex items-center justify-center">
                  <div className="text-center">
                     <div className="text-4xl font-black text-slate-900 mb-2">{data.step5_risk}</div>
-                    <p className="text-slate-500 text-sm">TikTok Ban Risk Level</p>
+                    <p className="text-slate-500 text-sm">Nível de Risco de Banimento</p>
                  </div>
               </div>
           </div>
@@ -124,7 +124,7 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ data, onReset }) =
              <div className="bg-slate-50 p-4 border-b border-slate-100 flex justify-between items-center text-pink-600">
                 <div className="flex items-center">
                   <Hash className="w-5 h-5 mr-2" />
-                  <h3 className="font-cartoon text-xl tracking-wide">STEP 4: CAPTION</h3>
+                  <h3 className="font-cartoon text-xl tracking-wide">ETAPA 4: LEGENDA</h3>
                 </div>
                 <CopyButton text={`${data.step4_description.copy}\n\n${data.step4_description.hashtags.join(' ')}`} />
              </div>

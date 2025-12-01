@@ -1,4 +1,4 @@
-import { GoogleGenAI, Type, Schema } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
 import { ScriptResponse, Language } from "../types";
 
 const SYSTEM_INSTRUCTION = `
@@ -16,7 +16,7 @@ ESTRUTURA DE RESPOSTA (JSON):
 5. step5_risk: Avaliação de risco (<8%).
 `;
 
-const responseSchema: Schema = {
+const responseSchema = {
   type: Type.OBJECT,
   properties: {
     step1_script: {

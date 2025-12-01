@@ -12,15 +12,15 @@ interface StepWizardProps {
 }
 
 const CATEGORIES = [
-  { id: 'politics', label: 'POLITICS & GOV', icon: Landmark, color: 'text-blue-500', border: 'border-blue-600', bg: 'hover:bg-blue-900/40' },
-  { id: 'global', label: 'GLOBAL EVENTS', icon: Globe, color: 'text-red-500', border: 'border-red-600', bg: 'hover:bg-red-900/40' },
-  { id: 'tech', label: 'TECH & BIG TECH', icon: Cpu, color: 'text-cyan-400', border: 'border-cyan-500', bg: 'hover:bg-cyan-900/40' },
-  { id: 'pop', label: 'POP CULTURE', icon: Sparkles, color: 'text-purple-500', border: 'border-purple-600', bg: 'hover:bg-purple-900/40' },
-  { id: 'social', label: 'SOCIAL ISSUES', icon: Users, color: 'text-green-500', border: 'border-green-600', bg: 'hover:bg-green-900/40' },
-  { id: 'crime', label: 'CRIME & TRUE CASES', icon: Gavel, color: 'text-stone-400', border: 'border-stone-500', bg: 'hover:bg-stone-900/40' },
-  { id: 'economy', label: 'ECONOMY', icon: TrendingUp, color: 'text-emerald-500', border: 'border-emerald-600', bg: 'hover:bg-emerald-900/40' },
-  { id: 'viral', label: 'VIRAL NEWS', icon: Zap, color: 'text-yellow-500', border: 'border-yellow-600', bg: 'hover:bg-yellow-900/40' },
-  { id: 'custom', label: 'SUGGEST TOPIC', icon: MessageSquare, color: 'text-slate-400', border: 'border-slate-600', bg: 'hover:bg-slate-800' },
+  { id: 'politics', label: 'POLÍTICA E GOVERNO', icon: Landmark, color: 'text-blue-500', border: 'border-blue-600', bg: 'hover:bg-blue-900/40' },
+  { id: 'global', label: 'EVENTOS GLOBAIS', icon: Globe, color: 'text-red-500', border: 'border-red-600', bg: 'hover:bg-red-900/40' },
+  { id: 'tech', label: 'TECNOLOGIA E BIG TECH', icon: Cpu, color: 'text-cyan-400', border: 'border-cyan-500', bg: 'hover:bg-cyan-900/40' },
+  { id: 'pop', label: 'CULTURA POP', icon: Sparkles, color: 'text-purple-500', border: 'border-purple-600', bg: 'hover:bg-purple-900/40' },
+  { id: 'social', label: 'QUESTÕES SOCIAIS', icon: Users, color: 'text-green-500', border: 'border-green-600', bg: 'hover:bg-green-900/40' },
+  { id: 'crime', label: 'CRIME E CASOS REAIS', icon: Gavel, color: 'text-stone-400', border: 'border-stone-500', bg: 'hover:bg-stone-900/40' },
+  { id: 'economy', label: 'ECONOMIA', icon: TrendingUp, color: 'text-emerald-500', border: 'border-emerald-600', bg: 'hover:bg-emerald-900/40' },
+  { id: 'viral', label: 'NOTÍCIAS VIRAIS', icon: Zap, color: 'text-yellow-500', border: 'border-yellow-600', bg: 'hover:bg-yellow-900/40' },
+  { id: 'custom', label: 'SUGERIR TEMA', icon: MessageSquare, color: 'text-slate-400', border: 'border-slate-600', bg: 'hover:bg-slate-800' },
 ];
 
 export const StepWizard: React.FC<StepWizardProps> = ({ currentStep, onLanguageSelect, onTopicSubmit }) => {
@@ -48,9 +48,9 @@ export const StepWizard: React.FC<StepWizardProps> = ({ currentStep, onLanguageS
         <div className="bg-white rounded-xl shadow-2xl p-8 border-4 border-yellow-400">
           <div className="flex items-center justify-center mb-6">
             <Globe className="w-10 h-10 text-blue-500 mr-2" />
-            <h2 className="text-2xl font-cartoon text-slate-900">SELECT LANGUAGE</h2>
+            <h2 className="text-2xl font-cartoon text-slate-900">SELECIONE O IDIOMA</h2>
           </div>
-          <p className="text-slate-600 mb-6 text-center font-bold">In which language do you want the prophecy?</p>
+          <p className="text-slate-600 mb-6 text-center font-bold">Em qual idioma você deseja a profecia?</p>
           
           <div className="space-y-3">
             {(['Português', 'Espanhol', 'Inglês'] as Language[]).map((lang) => (
@@ -74,7 +74,7 @@ export const StepWizard: React.FC<StepWizardProps> = ({ currentStep, onLanguageS
       return (
         <div className="w-full max-w-5xl mx-auto animate-fade-in px-4">
           <h2 className="text-center text-3xl md:text-4xl font-black mb-8 uppercase tracking-tighter text-white">
-            CHOOSE THE THEME OF <span className="text-red-600">BREAKING NEWS</span>
+            ESCOLHA O TEMA DO <span className="text-red-600">BREAKING NEWS</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -112,14 +112,14 @@ export const StepWizard: React.FC<StepWizardProps> = ({ currentStep, onLanguageS
           onClick={() => setInputMode('grid')}
           className="flex items-center text-slate-400 hover:text-white mb-6 transition-colors font-bold text-sm bg-slate-800/50 px-4 py-2 rounded-full w-fit hover:bg-slate-800"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" /> CHOOSE ANOTHER THEME
+          <ArrowLeft className="w-4 h-4 mr-2" /> ESCOLHER OUTRO TEMA
         </button>
         <div className="bg-white rounded-xl shadow-2xl p-8 border-4 border-yellow-400">
            <div className="flex items-center justify-center mb-6">
             <Tv className="w-10 h-10 text-pink-500 mr-2" />
-            <h2 className="text-2xl font-cartoon text-slate-900">THE CONSPIRACY</h2>
+            <h2 className="text-2xl font-cartoon text-slate-900">A CONSPIRAÇÃO</h2>
           </div>
-          <p className="text-slate-600 mb-6 text-center font-bold">What is the topic of the script?</p>
+          <p className="text-slate-600 mb-6 text-center font-bold">Qual o tema do roteiro?</p>
           
           <form onSubmit={handleTopicSubmit}>
             <div className="relative mb-6">
@@ -128,7 +128,7 @@ export const StepWizard: React.FC<StepWizardProps> = ({ currentStep, onLanguageS
                 type="text"
                 value={topicInput}
                 onChange={(e) => setTopicInput(e.target.value)}
-                placeholder="e.g., Simpsons predicted 2025 lottery..."
+                placeholder="ex: Simpsons previram a loteria de 2025..."
                 className="w-full pl-10 pr-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-yellow-400 text-slate-900 placeholder-slate-400 transition-colors"
                 autoFocus
               />
@@ -139,7 +139,7 @@ export const StepWizard: React.FC<StepWizardProps> = ({ currentStep, onLanguageS
               className="w-full py-4 bg-yellow-400 hover:bg-yellow-300 disabled:opacity-50 disabled:cursor-not-allowed text-slate-900 font-cartoon text-xl tracking-wider rounded-lg shadow-lg transform hover:-translate-y-1 transition-all flex items-center justify-center"
             >
               <Sparkles className="w-5 h-5 mr-2" />
-              GENERATE SCRIPT
+              GERAR ROTEIRO
             </button>
           </form>
         </div>

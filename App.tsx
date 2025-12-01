@@ -30,7 +30,7 @@ const App: React.FC = () => {
       setStep(AppStep.RESULTS);
     } catch (err) {
       console.error(err);
-      setError("Failed to generate the conspiracy. The system might be jammed by the authorities.");
+      setError("Falha ao gerar a conspiração. O sistema pode estar sendo bloqueado pelas autoridades.");
       setStep(AppStep.ERROR);
     }
   };
@@ -56,7 +56,7 @@ const App: React.FC = () => {
             </span>
           </div>
           <div className="text-xs font-mono text-slate-500 uppercase">
-             Confidential Agent v1.0
+             Agente Confidencial v1.0
           </div>
         </div>
       </nav>
@@ -67,21 +67,21 @@ const App: React.FC = () => {
         {step === AppStep.IDLE && (
           <div className="text-center space-y-8 animate-fade-in max-w-2xl">
             <div className="inline-block bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold animate-pulse mb-4 uppercase tracking-widest">
-              Breaking News
+              Notícia Urgente
             </div>
             <h1 className="text-6xl md:text-7xl font-cartoon leading-none">
-              CREATE VIRAL<br />
-              <span className="text-yellow-400 text-shadow-yellow">PROPHECIES</span>
+              CRIE PROFECIAS<br />
+              <span className="text-yellow-400 text-shadow-yellow">VIRAIS</span>
             </h1>
             <p className="text-xl text-slate-400 font-light max-w-lg mx-auto">
-              Generate alarmist, journalistic scripts in the style of The Simpsons tailored for TikTok. 
-              <span className="block mt-2 text-yellow-400 font-bold opacity-80">High engagement. Low risk.</span>
+              Gere roteiros jornalísticos alarmistas no estilo dos Simpsons, feitos sob medida para o TikTok.
+              <span className="block mt-2 text-yellow-400 font-bold opacity-80">Alto engajamento. Baixo risco.</span>
             </p>
             <button
               onClick={startApp}
               className="group relative px-8 py-4 bg-yellow-400 text-slate-900 font-cartoon text-2xl rounded-xl shadow-[0_0_20px_rgba(250,204,21,0.5)] hover:shadow-[0_0_40px_rgba(250,204,21,0.7)] transition-all transform hover:-translate-y-1 active:translate-y-0"
             >
-              START GENERATOR
+              INICIAR GERADOR
               <span className="absolute inset-0 rounded-xl ring-4 ring-white/20 group-hover:ring-white/40 transition-all"></span>
             </button>
           </div>
@@ -104,8 +104,8 @@ const App: React.FC = () => {
                  <span className="text-4xl">🍩</span>
                </div>
             </div>
-            <h3 className="text-2xl font-cartoon text-white mb-2">CONSULTING THE CRYSTAL BALL...</h3>
-            <p className="text-slate-400 animate-pulse">Analyzing viral patterns & conspiracy theories</p>
+            <h3 className="text-2xl font-cartoon text-white mb-2">CONSULTANDO A BOLA DE CRISTAL...</h3>
+            <p className="text-slate-400 animate-pulse">Analisando padrões virais e teorias da conspiração</p>
           </div>
         )}
 
@@ -116,13 +116,13 @@ const App: React.FC = () => {
         {step === AppStep.ERROR && (
           <div className="text-center max-w-md bg-red-900/20 p-8 rounded-xl border-2 border-red-500/50">
             <AlertOctagon className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h3 className="text-2xl font-cartoon text-red-500 mb-2">TRANSMISSION FAILED</h3>
+            <h3 className="text-2xl font-cartoon text-red-500 mb-2">FALHA NA TRANSMISSÃO</h3>
             <p className="text-slate-300 mb-6">{error}</p>
             <button
               onClick={resetApp}
               className="px-6 py-3 bg-red-600 hover:bg-red-500 text-white rounded-lg font-bold transition-colors"
             >
-              TRY AGAIN
+              TENTAR NOVAMENTE
             </button>
           </div>
         )}
